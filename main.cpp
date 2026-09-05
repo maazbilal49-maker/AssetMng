@@ -66,7 +66,7 @@ void resize_image(const char *filename, int new_w, int new_h){
                             new_data, new_w, new_h, 0,
                             STBIR_4CHANNEL);
 
-    stbi_write_png(filename, new_w, new_h, channels, new_data, new_w * channels);
+    stbi_write_png(filename, new_w, new_h, channels, new_data, new_w * 4);
 
     stbi_image_free(data);
     free(new_data);
